@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans - PhySC Gym</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(341, 78, 78, 0.53), rgba(137, 212, 241, 0.61));
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .modal.fade .modal-dialog {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container">
+            <!-- Logo aligned to the left -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img\logo (2).png" alt="Physc Gym Logo" width="190" height="120" class="d-inline-block align-text-top">
+            </a>
+    
+            <!-- Navbar toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation items aligned to the right -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html" style="color: #aa2c10 !important;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="about.html" style="color: #aa2c10 !important;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="equipments.html" style="color: #aa2c10 !important;">Equipments & Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="franchise.html" style="color: #aa2c10 !important;">Franchise</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="membership.html" style="color: #aa2c10 !important;">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="careerwithus.html" style="color: #aa2c10 !important;">Career With Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="contact.html" style="color: #aa2c10 !important;">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Membership Plans Section -->
+    <section class="container my-5 text-center">
+        <h1 style="color: #aa2c10;">
+            <i class="fa fa-clipboard-list" style="color: #aa2c10; margin-right: 10px;"></i> Choose Your Membership Plan
+        </h1>
+        
+        <p class="lead" style="color: #3d7f81;"><strong> Find the best plan that suits your fitness needs</strong></p>
+        <div class="row mt-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card border-primary mb-4">
+                    <div class="card-header" style="background-color: #3d7f81; color: white;">Basic Plan</div>
+                    <div class="card-body">
+                        <h3 class="card-title">₹999/month</h3>
+                        <p>✔ Access to gym equipment</p>
+                        <p>✔ Locker facility</p>
+                        <p>✔ Open gym access</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Premium Plan -->
+            <div class="col-md-4">
+                <div class="card border-success mb-4">
+                    <div class="card-header" style="background-color: #3d7f81; color: white;">Premium Plan</div>
+                    <div class="card-body">
+                        <h3 class="card-title">₹1999/month</h3>
+                        <p>✔ All Basic Plan features</p>
+                        <p>✔ Personal trainer guidance</p>
+                        <p>✔ Group fitness classes</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Elite Plan -->
+            <div class="col-md-4">
+                <div class="card border-warning mb-4">
+                    <div class="card-header" style="background-color: #3d7f81; color: white;">Elite Plan</div>
+                    <div class="card-body">
+                        <h3 class="card-title">₹2999/month</h3>
+                        <p>✔ All Premium Plan features</p>
+                        <p>✔ Personalized diet plan</p>
+                        <p>✔ VIP gym access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Join Now Button -->
+        <div class="text-center mt-4">
+            <button class="btn btn-lg" style="background-color: #aa2c10; border-color: #aa2c10; color: white;" onclick="openForm()">Join Now</button>
+        </div>
+    </section>
+    
+
+    <!-- Modal Form -->
+    <div class="modal fade" id="joinForm" tabindex="-1" aria-labelledby="joinFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="joinFormLabel">Join Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="membershipForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contact No.</label>
+                            <input type="tel" class="form-control" id="contact" name="contact" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Select Plan</label>
+                            <select class="form-select" id="plan" name="plan">
+                                <option value="Basic Plan">Basic Plan</option>
+                                <option value="Premium Plan">Premium Plan</option>
+                                <option value="Elite Plan">Elite Plan</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preferred Gym Location</label>
+                            <select class="form-select" id="location" name="location">
+                                <option value="Nigdi">Nigdi</option>
+                                <option value="Bhosari">Bhosari</option>
+                                <option value="Chinchwad">Chinchwad</option>
+                                <option value="Talegaon">Talegaon</option>
+                                <option value="Baramati">Baramati</option>
+                                <option value="Kharghar">Kharghar</option>
+                                <option value="Pimpri">Pimpri</option>
+                                <option value="Hadapsar">Hadapsar</option>
+                                <option value="Warana Nagar">Warana Nagar</option>
+                                <option value="Satara">Satara</option>
+                                <option value="Peth Vadgaon">Peth Vadgaon</option>
+                                <option value="Gadhinglaj">Gadhinglaj</option>
+                                <option value="Ichalkaranji">Ichalkaranji</option>
+                                <option value="Nipani">Nipani</option>
+                                <option value="Kamothe (Navi Mumbai)">Kamothe (Navi Mumbai)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Any Questions?</label>
+                            <textarea class="form-control" id="questions" name="questions"></textarea>
+                        </div>
+                        <button type="submit" class="btn w-100" style="background-color: #3d7f81; border-color: #3d7f81; color: white;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openForm() {
+            new bootstrap.Modal(document.getElementById('joinForm')).show();
+        }
+
+        document.getElementById("membershipForm").onsubmit = function(event) {
+            event.preventDefault();
+            let formData = new FormData(this);
+
+            fetch("membership_submit.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    window.location.href = data.whatsappURL;
+                } else {
+                    alert(data.message);
+                }
+            });
+        };
+    </script>
+
+<section class="container text-center my-5">
+    <h2 style="color: #3d7f81; font-weight: bold;">
+        <i class="fa fa-clock" style="color: #3d7f81; margin-right: 10px;"></i> Offers
+    </h2>
+    <div class="row">
+
+        <!-- Peak Hours Card -->
+        <div class="col-md-3 mb-4 mt-3">
+            <div class="card" style="border: 1px solid #aa2c10; border-radius: 10px; padding: 20px;">
+                <h4 class="card-title" style="color: #3d7f81;">PEAK HOURS</h4>
+                <p><strong>Timing:</strong> 6:00AM to 10:00AM & 6:00PM to 10:00PM</p>
+                <ul class="list-unstyled">
+                    <li>Includes Weight Training, Cardio, Group Activities</li>
+                    <li>Group Activities: Yoga, Aerobics, Abs, Spinning, Circuit Training, Tabata, Hips & Thighs, Stretching batch</li>
+                    <li>Changing room, Steam, Shower, Lockers also available</li>
+                    <li>5 General trainers available to assist you</li>
+                    <li>2 days a week of body measurement, BMI, BMR, FAT PERCENT are counted</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Off Peak Hours Card -->
+        <div class="col-md-3 mb-4 mt-3">
+            <div class="card" style="border: 1px solid #aa2c10; border-radius: 10px; padding: 20px;">
+                <h4 class="card-title" style="color: #3d7f81;">OFF PEAK HOURS</h4>
+                <p><strong>Timing:</strong> 11:00AM to 05:00PM</p>
+                <ul class="list-unstyled">
+                    <li>Includes Weight Training, Cardio, Group Activities</li>
+                    <li>Group Activities: Yoga, Aerobics, Abs, Spinning, Circuit Training, Tabata, Hips & Thighs, Stretching batch</li>
+                    <li>Changing room, Steam, Shower, Lockers also available</li>
+                    <li>5 General trainers available to assist you</li>
+                    <li>2 days a week of body measurement, BMI, BMR, FAT PERCENT are counted</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Student Membership Card -->
+        <div class="col-md-3 mb-4 mt-3">
+            <div class="card" style="border: 1px solid #aa2c10; border-radius: 10px; padding: 20px;">
+                <h4 class="card-title" style="color: #3d7f81;">STUDENT MEMBERSHIP</h4>
+                <p><strong>Timing:</strong> 10:00AM to 06:00PM</p>
+                <ul class="list-unstyled">
+                    <li>Includes Weight Training, Cardio, Group Activities</li>
+                    <li>Group Activities: Yoga, Aerobics, Abs, Spinning, Circuit Training, Tabata, Hips & Thighs, Stretching batch</li>
+                    <li>Changing room, Steam, Shower, Lockers also available</li>
+                    <li>5 General trainers available to assist you</li>
+                    <li>2 days a week of body measurement, BMI, BMR, FAT PERCENT are counted</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Group Membership Card -->
+        <div class="col-md-3 mb-4 mt-3">
+            <div class="card" style="border: 1px solid #aa2c10; border-radius: 10px; padding: 20px;">
+                <h4 class="card-title" style="color: #3d7f81;">GROUP MEMBERSHIP</h4>
+                <p><strong>Timing:</strong> 7:00AM to 9:30PM</p>
+                <ul class="list-unstyled">
+                    <li>Group Activities: Yoga, Aerobics, Abs, Spinning, Circuit Training, Tabata, Hips & Thighs, Stretching batch</li>
+                    <li>Certified trainers available to assist you</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer" style="position: relative; padding: 40px 0; color: white; text-align: center; font-family: Arial, sans-serif;">
+    <!-- Background Image with Overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: url('img/footer.jpg') no-repeat center center/cover;">
+    </div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 78, 78, 0.53), rgba(137, 212, 241, 0.61));">
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="container d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+        
+        <!-- Logo on the left -->
+        <div class="footer-logo">
+            <img src="img/logo (2).png" alt="Physc Gym Logo" width="150">
+        </div>
+
+        <!-- Quick Links in the Center -->
+        <div class="footer-links text-center">
+            <h3 style="font-size: 20px; font-weight: bold;">Quick Links</h3>
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 10px;">Home</a>
+            <a href="about.html" style="color: white; text-decoration: none; margin: 0 10px;">About Us</a>
+            <a href="equipments.html" style="color: white; text-decoration: none; margin: 0 10px;">Equipments & Trainers</a>
+            <a href="franchise.html" style="color: white; text-decoration: none; margin: 0 10px;">Franchise</a>
+            <a href="membership.html" style="color: white; text-decoration: none; margin: 0 10px;">Membership</a>
+            <a href="careerwithus.html" style="color: white; text-decoration: none; margin: 0 10px;">Career With Us</a>
+            <a href="contact.html" style="color: white; text-decoration: none; margin: 0 10px;">Contact Us</a>
+        </div>
+
+        <!-- Social Media Icons on the Right -->
+        <div class="social-icons">
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-facebook"></i></a>
+ 
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom text-center mt-4" style="border-top: 1px solid white; padding-top: 10px; position: relative; z-index: 2;">
+        <p> A Physc Gym</p>
+        <p>Copyright © </p>
+    </div>
+</footer>
+</body>
+</html>

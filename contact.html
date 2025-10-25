@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PhySC Gym</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        body {
+            background: linear-gradient(rgba(341, 78, 78, 0.53), rgba(137, 212, 241, 0.61));
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container">
+            <!-- Logo aligned to the left -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img\logo (2).png" alt="Physc Gym Logo" width="190" height="120" class="d-inline-block align-text-top">
+            </a>
+    
+            <!-- Navbar toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation items aligned to the right -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html" style="color: #aa2c10 !important;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="about.html" style="color: #aa2c10 !important;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="equipments.html" style="color: #aa2c10 !important;">Equipments & Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="franchise.html" style="color: #aa2c10 !important;">Franchise</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="membership.html" style="color: #aa2c10 !important;">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="careerwithus.html" style="color: #aa2c10 !important;">Career With Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="contact.html" style="color: #aa2c10 !important;">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="container my-5">
+        <div class="text-center">
+            <h1 style="color: #aa2c10;"><strong><i class="fas fa-phone-alt"></i> Contact PhySC Gym</strong></h1>
+
+            <p class="lead" style="color: #3d7f81; ">Have questions? Reach out to us!</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3 style="color: #3d7f81; "><strong>Get in Touch</h3></strong>
+                <p style="color: #aa2c10;"><strong>Phone:</strong> +91 7039259971</p>
+               
+                <p style="color: #aa2c10;"><strong>Operating Hours:</strong> Monday - Saturday: 6:00 AM - 10:00 PM | Sunday: Closed</p>
+                <p style="color: #aa2c10;"><strong>Address:</strong> 2nd Floor, Fusion Park, Opp. PCMC Garden, Ajmera Road, Morwadi, Pimpri, Pune - 411018.</p>
+                <h3 style="color: #3d7f81; ">Follow Us</h3>
+               <!-- Add Font Awesome CDN in the head if it's not already included -->
+
+<!-- Social Media Links with Icons -->
+<a href="#" style="font-size: 30px; color: #aa2c10;"><i class="fab fa-facebook-f"></i></a>
+<a href="#" style="font-size: 30px; color: #aa2c10;"><i class="fab fa-instagram"></i></a>
+<a href="#" style="font-size: 30px; color: #aa2c10;"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" action="process_contact.php" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style=" background-color: #3d7f81;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- WhatsApp Redirect Script -->
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            // Your WhatsApp number (use international format without +)
+            let phoneNumber = "917039259971"; 
+
+            // Create WhatsApp message URL
+            let whatsappMessage = `Hello, my name is ${name}. My email is ${email}. ${message}`;
+            let encodedMessage = encodeURIComponent(whatsappMessage);
+            let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Redirect to WhatsApp
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+
+<footer class="footer" style="position: relative; padding: 40px 0; color: white; text-align: center; font-family: Arial, sans-serif;">
+    <!-- Background Image with Overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: url('img/footer.jpg') no-repeat center center/cover;">
+    </div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 78, 78, 0.53), rgba(137, 212, 241, 0.61));">
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="container d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+        
+        <!-- Logo on the left -->
+        <div class="footer-logo">
+            <img src="img/logo (2).png" alt="Physc Gym Logo" width="150">
+        </div>
+
+        <!-- Quick Links in the Center -->
+        <div class="footer-links text-center">
+            <h3 style="font-size: 20px; font-weight: bold;">Quick Links</h3>
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 10px;">Home</a>
+            <a href="about.html" style="color: white; text-decoration: none; margin: 0 10px;">About Us</a>
+            <a href="equipments.html" style="color: white; text-decoration: none; margin: 0 10px;">Equipments & Trainers</a>
+            <a href="franchise.html" style="color: white; text-decoration: none; margin: 0 10px;">Franchise</a>
+            <a href="membership.html" style="color: white; text-decoration: none; margin: 0 10px;">Membership</a>
+            <a href="careerwithus.html" style="color: white; text-decoration: none; margin: 0 10px;">Career With Us</a>
+            <a href="contact.html" style="color: white; text-decoration: none; margin: 0 10px;">Contact Us</a>
+        </div>
+
+        <!-- Social Media Icons on the Right -->
+        <div class="social-icons">
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; font-size: 24px; margin: 0 8px;"><i class="fab fa-facebook"></i></a>
+ 
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom text-center mt-4" style="border-top: 1px solid white; padding-top: 10px; position: relative; z-index: 2;">
+        <p> A Physc Gym</p>
+        <p>Copyright © </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
