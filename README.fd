@@ -25,3 +25,23 @@ The Gym Management System (GMS) is a software-based solution built to help gym m
    ```bash
    git clone [https://github.com/sumitgopanwar/gym-management-system.git](https://github.com/sumitgopanwar/gym-management-system.git)
    cd gym-management-system
+Initialize your virtual environment (if using Python):
+
+Bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+Install dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the application:
+
+Bash
+flask run
+# Or 'npm start' if using Node.js
+👨‍💻 Author
+Sumit Gopanwar - GitHub Profile
+
+
+[Gym Management System Demonstration Project](https://www.youtube.com/watch?v=_HhwVYttVZA)
+This video showcases a functional software demonstration for a gym platform, which can provid
