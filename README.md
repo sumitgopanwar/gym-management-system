@@ -19,7 +19,7 @@ The Gym Management System (GMS) is a software-based solution built to help gym m
 * **Database:** MySQL / PostgreSQL
 * **Version Control:** Git & GitHub
 
-## ⚙️ Local Installation & Setup
+ ⚙️ Local Installation & Setup
 
 1. **Clone the repository:**
    ```bash
